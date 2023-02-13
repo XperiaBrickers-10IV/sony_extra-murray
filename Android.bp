@@ -37,6 +37,42 @@ android_app_import {
 	product_specific: true,
 }
 
+android_app_import {
+	name: "CreativeEffect",
+	owner: "sony",
+	apk: "extra/camera/CreativeEffect/CreativeEffect.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "CameraPanorama",
+	owner: "sony",
+	apk: "extra/camera/CameraPanorama/CameraPanorama.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "PortraitSelfie",
+	owner: "sony",
+	apk: "extra/camera/PortraitSelfie/PortraitSelfie.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
 dex_import {
 	name: "com.google.protobuf-2.3.0-dummy.jar",
 	owner: "sony",
@@ -85,4 +121,76 @@ dex_import {
 	name: "somc-ext-mmwdiapi.jar",
 	owner: "sony",
 	jars: ["extra/sonyframework/system/framework/somc-ext-mmwdiapi.jar"],
+}
+
+android_app_import {
+	name: "360RASettings",
+	owner: "sony",
+	apk: "extra/dolby/system_ext/app/threesixtyrasettings/threesixtyrasettings.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+	privileged: true,
+}
+
+android_app_import {
+	name: "360RASystem",
+	owner: "sony",
+	apk: "extra/dolby/system_ext/priv-app/threesixtyrasystemmain/threesixtyrasystemmain.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+	privileged: true,
+}
+
+android_app_import {
+	name: "AudioUtil",
+	owner: "sony",
+	apk: "extra/dolby/system_ext/priv-app/com.sony.audioutil/com.sony.audioutil.apk",
+	certificate: "platform",
+	system_ext_specific: true,
+	privileged: true,
+}
+
+android_app_import {
+	name: "SoundEnhancement",
+	owner: "sony",
+	apk: "extra/dolby/system_ext/priv-app/SoundEnhancement/SoundEnhancement.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+	privileged: true,
+}
+
+android_app_import {
+	name: "DolbySound",
+	owner: "dolby",
+	apk: "extra/dolby/system_ext/priv-app/DolbySound/DolbySound.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	required: [
+        "daxService",
+        ],
+	system_ext_specific: true,
+	privileged: true,
+}
+
+android_app_import {
+	name: "daxService",
+	owner: "dolby",
+	apk: "extra/dolby/system_ext/priv-app/daxService/daxService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	system_ext_specific: true,
+	privileged: true,
 }
