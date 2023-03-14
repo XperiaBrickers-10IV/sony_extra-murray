@@ -1,5 +1,5 @@
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/sony/extra
+    vendor/sony/extra-murray
 
 # SonyFramework
  PRODUCT_COPY_FILES += \
@@ -11,6 +11,10 @@ PRODUCT_SOONG_NAMESPACES += \
     Camera \
     CameraCommon \
     CameraExtensions
+
+# Dolby
+ PRODUCT_PACKAGES += \
+    DolbySoundLite
 
 # Controller Support
  PRODUCT_COPY_FILES += \
